@@ -2,12 +2,12 @@ import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { HiSun, HiMoon, HiMenuAlt3, HiX } from 'react-icons/hi';
 import { useTheme } from '../context/ThemeContext';
+import { personal } from '../data/resumeData';
 
 const NAV_LINKS = [
   { label: 'About', href: '#about' },
   { label: 'Skills', href: '#skills' },
   { label: 'Projects', href: '#projects' },
-  { label: 'Experience', href: '#experience' },
   { label: 'Education', href: '#education' },
   { label: 'Contact', href: '#contact' },
 ];
@@ -63,11 +63,11 @@ const Navbar = () => {
           aria-label="Back to top"
         >
           <span className="w-8 h-8 rounded-lg bg-gradient-to-br from-indigo-500 to-violet-600 flex items-center justify-center text-white font-bold text-sm shadow-md shadow-indigo-500/25 group-hover:scale-110 transition-transform">
-            K
+            {personal.firstName[0]}
           </span>
           <span className="font-bold text-gray-900 dark:text-white ml-1 text-sm hidden sm:block">
-			Kashyap Ajudiya<span className="text-indigo-500"></span>
-		  </span>
+            {personal.name}
+          </span>
         </button>
 
         {/* Desktop links */}

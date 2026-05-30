@@ -4,18 +4,17 @@ import { HiArrowDown, HiDownload } from 'react-icons/hi';
 import { FiGithub, FiLinkedin, FiMail } from 'react-icons/fi';
 import { personal } from '../data/resumeData';
 
-// Terminal animation lines
 const TERMINAL_LINES = [
-  { type: 'cmd',     text: 'dotnet build KashyapPortfolio' },
-  { type: 'success', text: '✓ Build succeeded in 1.1s' },
+  { type: 'cmd',     text: './mvnw spring-boot:run' },
+  { type: 'success', text: '✓ Studify API online — 1000+ req/min' },
   { type: 'blank',   text: '' },
-  { type: 'cmd',     text: 'azure deploy --env production' },
-  { type: 'info',    text: '→ Processing 500+ events / day' },
-  { type: 'success', text: '✓ Deployed across 42+ locations' },
+  { type: 'cmd',     text: 'aws ecs deploy --service studify' },
+  { type: 'info',    text: '→ 50 concurrent WebRTC sessions active' },
+  { type: 'success', text: '✓ Auto-scaling enabled on AWS ECS' },
   { type: 'blank',   text: '' },
-  { type: 'cmd',     text: 'xunit --coverage --quality-gate' },
-  { type: 'success', text: '✓ All tests passing' },
-  { type: 'success', text: '✓ SonarQube gate passed' },
+  { type: 'cmd',     text: 'docker compose up -d' },
+  { type: 'success', text: '✓ Microservices healthy' },
+  { type: 'success', text: '✓ Redis cache connected' },
   { type: 'blank',   text: '' },
   { type: 'cmd',     text: 'echo "Let\'s build something great"' },
   { type: 'output',  text: "Let's build something great" },
@@ -46,15 +45,13 @@ const TerminalWindow = () => {
       transition={{ duration: 0.7, delay: 0.4, ease: 'easeOut' }}
       className="w-full max-w-lg animate-float"
     >
-      {/* Window chrome */}
       <div className="bg-gray-900 rounded-t-xl px-4 py-3 flex items-center gap-2 border border-white/10">
         <span className="w-3 h-3 rounded-full bg-red-500/80" />
         <span className="w-3 h-3 rounded-full bg-yellow-500/80" />
         <span className="w-3 h-3 rounded-full bg-emerald-500/80" />
-        <span className="ml-3 text-xs text-gray-500 font-mono">kashyap@portfolio ~ </span>
+        <span className="ml-3 text-xs text-gray-500 font-mono">{personal.githubUsername}@portfolio ~ </span>
       </div>
 
-      {/* Terminal body */}
       <div className="bg-gray-950/90 rounded-b-xl px-5 py-4 font-mono text-sm border border-t-0 border-white/10 min-h-[260px]">
         {TERMINAL_LINES.slice(0, visibleCount).map((line, i) => (
           <div key={i} className={`leading-6 ${LINE_COLORS[line.type]}`}>
@@ -69,7 +66,6 @@ const TerminalWindow = () => {
           </div>
         ))}
 
-        {/* Blinking cursor at the end */}
         {visibleCount >= TERMINAL_LINES.length && (
           <span className="inline-block w-2 h-4 bg-indigo-400 animate-blink ml-0.5 align-middle" />
         )}
@@ -88,7 +84,6 @@ const Hero = () => {
       id="hero"
       className="relative min-h-screen flex items-center overflow-hidden pt-16"
     >
-      {/* Background gradient orbs */}
       <div className="absolute inset-0 pointer-events-none overflow-hidden">
         <div className="absolute -top-32 -right-32 w-[600px] h-[600px] bg-indigo-500/10 dark:bg-indigo-500/8 rounded-full blur-3xl" />
         <div className="absolute -bottom-32 -left-32 w-[500px] h-[500px] bg-violet-500/10 dark:bg-violet-500/8 rounded-full blur-3xl" />
@@ -97,28 +92,24 @@ const Hero = () => {
 
       <div className="section-container relative z-10 w-full py-20">
         <div className="grid lg:grid-cols-2 gap-14 items-center">
-          {/* Left: Text content */}
           <div>
-            {/* Avatar + availability row */}
             <motion.div
               initial={{ opacity: 0, y: 10 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.4 }}
               className="flex items-center gap-4 mb-6"
             >
-              {/* Circular avatar */}
               <div className="relative shrink-0">
                 <div className="w-16 h-16 rounded-full overflow-hidden ring-2 ring-indigo-500/50 shadow-lg shadow-indigo-500/20">
                   <img
                     src={personal.avatar}
-                    alt="Kashyap Ajudiya"
+                    alt={personal.name}
                     className="w-full h-full object-cover"
                   />
                 </div>
                 <span className="absolute bottom-0 right-0 w-4 h-4 rounded-full bg-emerald-500 border-2 border-white dark:border-gray-950" />
               </div>
 
-              {/* Availability badge */}
               <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full text-xs font-medium
                          bg-emerald-50 dark:bg-emerald-500/10 text-emerald-700 dark:text-emerald-400
                          border border-emerald-200 dark:border-emerald-500/20">
@@ -127,31 +118,28 @@ const Hero = () => {
               </div>
             </motion.div>
 
-            {/* Name */}
             <motion.h1
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.1 }}
               className="text-5xl sm:text-6xl lg:text-7xl font-black tracking-tight text-gray-900 dark:text-white leading-none mb-3"
             >
-              Kashyap
+              {personal.firstName}
               <br />
               <span className="bg-gradient-to-r from-indigo-500 via-violet-500 to-purple-600 bg-clip-text text-transparent">
-                Ajudiya
+                {personal.lastName}
               </span>
             </motion.h1>
 
-            {/* Role */}
             <motion.p
               initial={{ opacity: 0, y: 15 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.2 }}
               className="text-xl sm:text-2xl font-semibold text-gray-600 dark:text-gray-300 mb-4"
             >
-              Software Engineer
+              {personal.role}
             </motion.p>
 
-            {/* Tagline */}
             <motion.p
               initial={{ opacity: 0, y: 15 }}
               animate={{ opacity: 1, y: 0 }}
@@ -161,7 +149,6 @@ const Hero = () => {
               {personal.tagline}
             </motion.p>
 
-            {/* CTA Buttons */}
             <motion.div
               initial={{ opacity: 0, y: 15 }}
               animate={{ opacity: 1, y: 0 }}
@@ -174,7 +161,7 @@ const Hero = () => {
               </button>
               <a
                 href={personal.resumeFile}
-                download
+                download="Rudra_Mehta_Resume.pdf"
                 className="btn-secondary"
               >
                 Download Resume
@@ -182,7 +169,6 @@ const Hero = () => {
               </a>
             </motion.div>
 
-            {/* Social links */}
             <motion.div
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
@@ -214,13 +200,11 @@ const Hero = () => {
             </motion.div>
           </div>
 
-          {/* Right: Terminal window */}
           <div className="flex justify-center lg:justify-end">
             <TerminalWindow />
           </div>
         </div>
 
-        {/* Scroll hint */}
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}

@@ -1,163 +1,171 @@
 // ─── Personal Info ────────────────────────────────────────────────────────────
 export const personal = {
-  name: 'Kashyap Ajudiya',
-  role: 'Software Engineer',
-  tagline: 'Building event-driven backend systems that scale with .NET Core & Azure',
-  email: 'kashyapajudiya11@gmail.com',
-  phone: '+91 7383567059',
-  github: 'https://github.com/Kashyap3003',       // update with real URL
-  linkedin: 'https://www.linkedin.com/in/kashyapajudiya/', // update with real URL
-  location: 'Gujarat, India',
-  resumeFile: '/Kashyap_CV.pdf',
-  avatar: '/avatar.jpg',
+  name: 'Rudra Mehta',
+  firstName: 'Rudra',
+  lastName: 'Mehta',
+  role: 'Backend Engineer',
+  tagline: 'Building scalable microservices and real-time systems with Java, Spring Boot & AWS',
+  email: 'r.v.mehta9905@gmail.com',
+  phone: '+91 8866028764',
+  github: 'https://github.com/Rudra9905',
+  githubUsername: 'Rudra9905',
+  linkedin: 'https://www.linkedin.com/in/rudra-mehta/',
+  location: 'Nadiad, Gujarat, India',
+  resumeFile: '/Rudra_Mehta_Resume.pdf',
+  avatar: '/avatar.png',
 };
 
 // ─── About ────────────────────────────────────────────────────────────────────
 export const aboutText =
-  'Software Engineer specializing in building scalable, event-driven backend systems with .NET Core and Azure. ' +
-  'I architect distributed cloud solutions, design clean REST APIs, and deliver production-grade systems that are built to last ' +
-  '— guided by SOLID principles and a relentless focus on code quality.';
+  'Backend engineer specializing in scalable microservices, real-time systems, and cloud-native architecture with Java and Spring Boot. ' +
+  'I design distributed backends, secure REST APIs, and production-grade platforms — from WebRTC classroom streaming to AI-powered payment gateways — ' +
+  'with a strong focus on system design, performance, and clean engineering.';
 
 export const stats = [
-  { value: '500+', label: 'Events / Day Processed' },
-  { value: '42+', label: 'Locations Deployed' },
-  { value: '15+', label: 'PMS Integrations' },
-  { value: '350+', label: 'DSA Problems Solved' },
+  { value: '300+', label: 'LeetCode Problems' },
+  { value: '1,000+', label: 'API Requests / Min' },
+  { value: '50+', label: 'Concurrent WebRTC Users' },
+  { value: '4', label: 'Major Projects Built' },
 ];
 
 // ─── Skills ───────────────────────────────────────────────────────────────────
 export const skillGroups = [
   {
-    category: 'Backend',
-    colorClass: 'text-blue-600 dark:text-blue-400',
-    bgClass: 'bg-blue-50 dark:bg-blue-500/10',
-    borderClass: 'border-blue-200 dark:border-blue-500/20',
-    items: ['.NET Core', 'ASP.NET MVC', 'REST APIs', 'Entity Framework Core', 'Event-Driven Architecture'],
-  },
-  {
-    category: 'Cloud & Infra',
-    colorClass: 'text-sky-600 dark:text-sky-400',
-    bgClass: 'bg-sky-50 dark:bg-sky-500/10',
-    borderClass: 'border-sky-200 dark:border-sky-500/20',
-    items: ['Microsoft Azure', 'Azure Service Bus', 'Azure Functions', 'GCP (Basic)'],
-  },
-  {
     category: 'Languages',
     colorClass: 'text-violet-600 dark:text-violet-400',
     bgClass: 'bg-violet-50 dark:bg-violet-500/10',
     borderClass: 'border-violet-200 dark:border-violet-500/20',
-    items: ['C#', 'JavaScript', 'C', 'C++', 'Angular'],
+    items: ['Java', 'C++', 'Python', 'SQL'],
+  },
+  {
+    category: 'Frameworks & Tech',
+    colorClass: 'text-blue-600 dark:text-blue-400',
+    bgClass: 'bg-blue-50 dark:bg-blue-500/10',
+    borderClass: 'border-blue-200 dark:border-blue-500/20',
+    items: ['Spring Boot', 'React', 'Node.js', 'WebSockets', 'WebRTC', 'gRPC'],
+  },
+  {
+    category: 'Cloud & DevOps',
+    colorClass: 'text-sky-600 dark:text-sky-400',
+    bgClass: 'bg-sky-50 dark:bg-sky-500/10',
+    borderClass: 'border-sky-200 dark:border-sky-500/20',
+    items: ['AWS', 'Docker', 'ECS', 'Git'],
   },
   {
     category: 'Databases',
     colorClass: 'text-emerald-600 dark:text-emerald-400',
     bgClass: 'bg-emerald-50 dark:bg-emerald-500/10',
     borderClass: 'border-emerald-200 dark:border-emerald-500/20',
-    items: ['MySQL', 'PostgreSQL', 'MongoDB', 'SQLite'],
+    items: ['PostgreSQL', 'MySQL', 'MongoDB', 'Redis'],
   },
   {
-    category: 'Tools',
+    category: 'AI & ML',
     colorClass: 'text-orange-600 dark:text-orange-400',
     bgClass: 'bg-orange-50 dark:bg-orange-500/10',
     borderClass: 'border-orange-200 dark:border-orange-500/20',
-    items: ['GitLab', 'SonarQube', 'Datadog', 'ClickUp', 'Cursor IDE'],
+    items: ['TensorFlow', 'FastAPI', 'DeepFace', 'RAG', 'Gemini API'],
   },
   {
     category: 'Concepts',
     colorClass: 'text-rose-600 dark:text-rose-400',
     bgClass: 'bg-rose-50 dark:bg-rose-500/10',
     borderClass: 'border-rose-200 dark:border-rose-500/20',
-    items: ['OOP', 'SOLID Principles', 'Data Structures & Algorithms', 'DBMS', 'Agile / Scrum'],
+    items: ['System Design', 'Microservices', 'Backend Architecture', 'REST APIs', 'DBMS'],
   },
 ];
 
 // ─── Projects ─────────────────────────────────────────────────────────────────
 export const projects = [
   {
-    title: 'OpenDental Report Utility',
-    subtitle: 'Healthcare Data ETL Pipeline',
+    title: 'Studify',
+    subtitle: 'Real-Time Scalable Smart Classroom Platform',
     problem:
-      'Healthcare providers needed a reliable, automated way to extract incremental data from 40+ Open Dental locations and deliver it to a central cloud platform — without data loss, duplication, or manual intervention.',
+      'Educational institutions needed a platform that supports live interactive meetings and large-scale broadcast streaming without compromising latency or reliability.',
     solution:
-      'Designed a config-driven ETL pipeline that extracts delta records from Open Dental (MySQL), stages them in encrypted SQLite, maps schemas, and packages them as Avro files for GCP upload. Built-in retry logic, JWT auth, and Datadog integration ensure reliability and full observability.',
+      'Architected a Spring Boot backend with WebRTC SFU architecture for real-time meetings (50 concurrent users) and broadcast streaming (300+ viewers). Deployed microservices on AWS ECS with JWT auth, RBAC, ALB, private networking, and horizontal auto-scaling.',
     impact:
-      'Deployed across 42+ Open Dental locations with consistent data processing. Datadog dashboards provide real-time error tracking and operational visibility for every sync cycle.',
-    tech: ['.NET Core', 'MySQL', 'SQLite', 'Avro', 'GCP', 'Datadog', 'JWT', 'ETL'],
+      'Processes 1,000+ API requests per minute with event-driven participant synchronization. Database query tuning cut response latency by 40%.',
+    tech: ['Java', 'Spring Boot', 'WebRTC', 'WebSockets', 'AWS', 'MySQL'],
     github: '#',
     demo: null,
     featured: true,
   },
   {
-    title: 'Answerly',
-    subtitle: 'Community Q&A Platform',
+    title: 'IrisPay',
+    subtitle: 'AI-Powered Biometric Payment Gateway',
     problem:
-      'Developers and learners lacked a dedicated, interactive space for technical Q&A with quality content management, rich user profiles, and community engagement features.',
+      'Traditional card-based payments create friction at checkout and raise security concerns around storing sensitive payment credentials.',
     solution:
-      'Built a full-stack MERN platform featuring JWT authentication, CRUD operations for questions, answers, and blogs via RESTful APIs, plus interactive features like likes, nested comments, and user profiles.',
+      'Built a microservices payment system coupling a Spring Boot transaction service with a Python/Flask ML inference service for card-free biometric authentication. Engineered a DeepFace facial embedding pipeline with cosine similarity verification and AES-encrypted embedding storage.',
     impact:
-      'A fully functional community platform demonstrating full-stack capability — clean REST API design, auth flows, and a reactive frontend that keeps users engaged.',
-    tech: ['MongoDB', 'Express.js', 'React', 'Node.js', 'REST APIs', 'JWT'],
-    github: 'https://github.com/Kashyap3003/Answerly-A_Question_Answer_Forum',
+      'Ranked Top 10 at DUHacks 5.0 out of 200 teams. Eliminated raw biometric image storage entirely while securing inter-service traffic via JWT and an API gateway.',
+    tech: ['Java', 'Spring Boot', 'Python', 'Flask', 'TensorFlow', 'PostgreSQL'],
+    github: 'https://github.com/Rudra9905/Iris',
     demo: null,
     featured: true,
+  },
+  {
+    title: 'QuickFix',
+    subtitle: 'On-Demand Home Services Platform',
+    problem:
+      'Home service marketplaces require reliable booking flows, real-time status updates, and secure multi-role access at scale.',
+    solution:
+      'Delivered scalable RESTful backend services with connection pooling and query optimization. Enforced stateless JWT security with Spring Security, RBAC, refresh token rotation, and WebSocket-driven live booking notifications.',
+    impact:
+      'Supports 100+ concurrent users with 35% faster average API response times. Full stack containerized with Docker for reproducible cross-environment deployments.',
+    tech: ['Java', 'Spring Boot', 'PostgreSQL', 'Docker', 'JWT', 'WebSockets'],
+    github: '#',
+    demo: null,
+    featured: false,
+  },
+  {
+    title: 'CodeIntel',
+    subtitle: 'AI-Powered Codebase Intelligence Platform',
+    problem:
+      'Large codebases are difficult to navigate and reason about — developers lack tools that understand architectural structure and dependencies at scale.',
+    solution:
+      'Designed a microservices architecture with Spring Boot orchestration and Python FastAPI for AST parsing. Built a RAG pipeline with hybrid BM25, keyword scoring, and dependency graph expansion. Added a gRPC query orchestrator with Redis caching and Gemini API integration.',
+    impact:
+      'Enables accurate multi-hop context resolution and automated detection of architectural issues with system-level engineering insights.',
+    tech: ['Java', 'Python', 'gRPC', 'Redis', 'Spring Boot', 'FastAPI'],
+    github: 'https://github.com/Rudra9905/Codeintel',
+    demo: null,
+    featured: false,
   },
 ];
 
 // ─── Experience ───────────────────────────────────────────────────────────────
-export const experience = [
-  {
-    title: 'Software Engineer',
-    company: 'NSR Information Systems Pvt Ltd',
-    location: 'Remote, India',
-    period: 'Aug 2025 – Present',
-    type: 'Full-time',
-    bullets: [
-      'Engineered event-driven healthcare integration systems that process 500+ events/day, enabling real-time data synchronization across 15+ Practice Management Systems.',
-      'Built scalable REST APIs in .NET Core; integrated Azure Service Bus and Azure Functions for reliable distributed cloud event processing.',
-      'Implemented asynchronous writeback workflows and a config-driven ETL pipeline, reducing manual data-processing overhead significantly.',
-      'Improved codebase quality with SonarQube — resolved code smells, reduced cyclomatic complexity, and addressed security hotspots.',
-      'Achieved higher test coverage by writing unit tests with xUnit and NSubstitute, increasing system reliability.',
-      'Used Cursor IDE for AI-assisted development, accelerating debugging velocity and feature delivery cycles.',
-    ],
-  },
-  {
-    title: 'Software Engineer Intern',
-    company: 'NSR Information Systems Pvt Ltd',
-    location: 'Remote, India',
-    period: 'Jan 2025 – Aug 2025',
-    type: 'Internship',
-    bullets: [
-      'Migrated a legacy monolithic system to an event-driven architecture using Azure Service Bus and Azure Functions — improving processing reliability and reducing system downtime.',
-      'Developed and debugged backend integration modules in a cloud-based healthcare platform supporting data exchange across multiple Practice Management Systems.',
-    ],
-  },
-];
+export const experience = [];
 
 // ─── Education ────────────────────────────────────────────────────────────────
 export const education = {
-  degree: 'B.Tech in Computer Engineering',
+  degree: 'B.Tech in Information Technology',
   school: 'Dharmsinh Desai University',
   location: 'Nadiad, Gujarat, India',
-  graduation: 'May 2025',
-  cpi: '7.92 / 10.00',
+  graduation: 'Expected May 2027',
+  cpi: '8.61 / 10.0',
 };
 
 // ─── Achievements ─────────────────────────────────────────────────────────────
+export const awsCertificate = {
+  file: '/AWS Certified Cloud Practitioner certificate.pdf',
+  downloadName: 'Rudra_Mehta_AWS_Cloud_Practitioner_Certificate.pdf',
+};
+
 export const achievements = [
   {
-    icon: '🏆',
-    title: 'Microsoft Certified: Azure Fundamentals',
-    detail: 'AZ-900 – April 2025',
-    link: 'https://learn.microsoft.com/api/credentials/share/en-us/KashyapAjudiya-5660/C4420F306DF85161?sharingId=CC9713057CE18951',
+    icon: '☁️',
+    title: 'AWS Certified Cloud Practitioner (CLF-C02)',
+    detail: 'Cloud concepts, AWS core services, security, pricing & architecture',
   },
   {
-    icon: '🥇',
-    title: 'AceHack 3.0 — Top 30',
-    detail: 'Ranked top 30 out of 400+ teams',
+    icon: '🏆',
+    title: 'DUHacks 5.0 — Top 10',
+    detail: 'IrisPay ranked among top offline projects out of 200 teams',
   },
   {
     icon: '💡',
-    title: '350+ DSA Problems Solved',
-    detail: 'LeetCode · CodeChef · HackerRank',
+    title: '300+ LeetCode Problems Solved',
+    detail: 'Strong foundation in data structures & algorithms',
   },
 ];

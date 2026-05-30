@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
-import { HiAcademicCap, HiExternalLink } from 'react-icons/hi';
-import { education, achievements } from '../data/resumeData';
+import { HiAcademicCap, HiDownload, HiExternalLink } from 'react-icons/hi';
+import { achievements, awsCertificate, education } from '../data/resumeData';
 import SectionTitle from './SectionTitle';
 
 const Education = () => (
@@ -12,7 +12,6 @@ const Education = () => (
       />
 
       <div className="grid lg:grid-cols-2 gap-8 max-w-4xl mx-auto">
-        {/* Education card */}
         <motion.div
           initial={{ opacity: 0, y: 24 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -41,7 +40,6 @@ const Education = () => (
           </div>
         </motion.div>
 
-        {/* Achievements */}
         <div className="space-y-4">
           {achievements.map(({ icon, title, detail, link }, i) => {
             const cardContent = (
@@ -89,6 +87,22 @@ const Education = () => (
               </motion.div>
             );
           })}
+
+          <motion.div
+            initial={{ opacity: 0, x: 20 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.4, delay: achievements.length * 0.1 }}
+          >
+            <a
+              href={encodeURI(awsCertificate.file)}
+              download={awsCertificate.downloadName}
+              className="btn-secondary w-full justify-center"
+            >
+              <HiDownload size={18} />
+              Download AWS Certificate
+            </a>
+          </motion.div>
         </div>
       </div>
     </div>

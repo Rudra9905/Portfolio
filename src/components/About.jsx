@@ -12,8 +12,8 @@ const EXPERTISE = [
     glow: 'hover:shadow-indigo-500/10',
     title: 'Backend Engineering',
     description:
-      'Building scalable, production-grade REST APIs and event-driven systems that handle high-throughput healthcare data across distributed environments.',
-    tags: ['.NET Core', 'C#', 'REST APIs', 'Event-Driven', 'xUnit'],
+      'Building scalable microservices and REST APIs with Spring Boot — from JWT-secured auth flows to event-driven real-time synchronization at production scale.',
+    tags: ['Java', 'Spring Boot', 'REST APIs', 'Microservices', 'WebSockets'],
   },
   {
     icon: <HiCloud size={26} />,
@@ -21,10 +21,10 @@ const EXPERTISE = [
     bg: 'bg-sky-50 dark:bg-sky-500/15',
     border: 'border-sky-200 dark:border-sky-500/25',
     glow: 'hover:shadow-sky-500/10',
-    title: 'Cloud Infrastructure',
+    title: 'Cloud & DevOps',
     description:
-      'Designing and deploying cloud-native solutions on Azure — from async messaging with Service Bus to serverless compute with Azure Functions.',
-    tags: ['Microsoft Azure', 'Azure Service Bus', 'Azure Functions', 'GCP', 'Datadog'],
+      'Deploying containerized services on AWS with ECS, load balancing, auto-scaling, and private networking for reliable, high-throughput production workloads.',
+    tags: ['AWS', 'Docker', 'ECS', 'Auto-scaling', 'Git'],
   },
   {
     icon: <HiDatabase size={26} />,
@@ -32,10 +32,10 @@ const EXPERTISE = [
     bg: 'bg-emerald-50 dark:bg-emerald-500/15',
     border: 'border-emerald-200 dark:border-emerald-500/25',
     glow: 'hover:shadow-emerald-500/10',
-    title: 'Data Engineering',
+    title: 'System Design & AI',
     description:
-      'Crafting config-driven ETL pipelines with delta sync, schema mapping, retry logic, and encrypted staging — deployed across 42+ live locations.',
-    tags: ['MySQL', 'PostgreSQL', 'MongoDB', 'SQLite', 'Avro', 'ETL'],
+      'Architecting distributed systems with gRPC, Redis caching, and RAG pipelines — plus ML-powered features like biometric verification and codebase intelligence.',
+    tags: ['System Design', 'gRPC', 'Redis', 'RAG', 'PostgreSQL'],
   },
 ];
 
@@ -57,7 +57,6 @@ const About = () => (
         subtitle="A quick look at who I am and what I bring to the table"
       />
 
-      {/* Bio */}
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -69,7 +68,7 @@ const About = () => (
           {aboutText}
         </p>
         <div className="flex flex-wrap justify-center gap-3">
-          {['Event-Driven Architecture', 'Azure Cloud', '.NET Core', 'SOLID Principles', 'REST APIs'].map((tag) => (
+          {['Microservices', 'AWS Cloud', 'Spring Boot', 'System Design', 'REST APIs'].map((tag) => (
             <span
               key={tag}
               className="px-3 py-1 bg-indigo-50 dark:bg-indigo-500/15 text-indigo-700 dark:text-indigo-300
@@ -81,7 +80,6 @@ const About = () => (
         </div>
       </motion.div>
 
-      {/* Core Expertise cards */}
       <motion.div
         className="grid md:grid-cols-3 gap-6"
         variants={containerVariants}
@@ -97,13 +95,11 @@ const About = () => (
                         hover:shadow-xl ${glow}
                         hover:border-opacity-60 transition-all duration-300`}
           >
-            {/* Icon */}
             <div className={`w-12 h-12 rounded-xl flex items-center justify-center ${bg} ${color}
                              border ${border} group-hover:scale-110 transition-transform duration-200`}>
               {icon}
             </div>
 
-            {/* Title + description */}
             <div>
               <h3 className={`text-base font-bold mb-2 ${color}`}>{title}</h3>
               <p className="text-sm text-gray-600 dark:text-gray-400 leading-relaxed">
@@ -111,7 +107,6 @@ const About = () => (
               </p>
             </div>
 
-            {/* Tags */}
             <div className="flex flex-wrap gap-2 mt-auto pt-4 border-t border-gray-100 dark:border-white/10">
               {tags.map((t) => (
                 <span

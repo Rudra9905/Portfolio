@@ -5,7 +5,7 @@ const Footer = () => (
   <footer className="border-t border-gray-200 dark:border-white/10 py-8">
     <div className="section-container flex flex-col sm:flex-row items-center justify-between gap-4">
       <p className="text-sm text-gray-500 dark:text-gray-500 text-center">
-        © {new Date().getFullYear()} Kashyap Ajudiya · Built with React & Tailwind CSS
+        © {new Date().getFullYear()} {personal.name} · Built with React & Tailwind CSS
       </p>
 
       <div className="flex items-center gap-3">

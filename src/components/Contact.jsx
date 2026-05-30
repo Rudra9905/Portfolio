@@ -5,9 +5,9 @@ import SectionTitle from './SectionTitle';
 
 const CONTACT_LINKS = [
   { icon: <FiMail size={20} />, label: 'Email', value: personal.email, href: `mailto:${personal.email}` },
-  { icon: <FiPhone size={20} />, label: 'Phone', value: personal.phone, href: `tel:${personal.phone}` },
-  { icon: <FiGithub size={20} />, label: 'GitHub', value: 'kashyapajudiya', href: personal.github },
-  { icon: <FiLinkedin size={20} />, label: 'LinkedIn', value: 'Kashyap Ajudiya', href: personal.linkedin },
+  { icon: <FiPhone size={20} />, label: 'Phone', value: personal.phone, href: `tel:${personal.phone.replace(/\s/g, '')}` },
+  { icon: <FiGithub size={20} />, label: 'GitHub', value: personal.githubUsername, href: personal.github },
+  { icon: <FiLinkedin size={20} />, label: 'LinkedIn', value: personal.name, href: personal.linkedin },
   { icon: <FiMapPin size={20} />, label: 'Location', value: personal.location, href: null },
 ];
 
