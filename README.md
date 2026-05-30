@@ -145,7 +145,7 @@ Deploy the `dist/` folder.
 
 - **Email:** r.v.mehta9905@gmail.com
 - **GitHub:** [Rudra9905](https://github.com/Rudra9905)
-- **LinkedIn:** [Rudra Mehta](https://www.linkedin.com/in/rudra-mehta/)
+- **LinkedIn:** [Rudra Mehta](https://www.linkedin.com/in/rudra-mehta9905/)
 
 ---
 

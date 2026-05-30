@@ -11,7 +11,7 @@ export const personal = {
   phone: '+91 8866028764',
   github: 'https://github.com/Rudra9905',
   githubUsername: 'Rudra9905',
-  linkedin: 'https://www.linkedin.com/in/rudra-mehta/',
+  linkedin: 'https://www.linkedin.com/in/rudra-mehta9905/',
   location: 'Nadiad, Gujarat, India',
   resumeFile: asset('Rudra_Mehta_Resume.pdf'),
   avatar: asset('avatar.png'),
