@@ -1,4 +1,6 @@
 // ─── Personal Info ────────────────────────────────────────────────────────────
+const asset = (path) => `${import.meta.env.BASE_URL}${path}`;
+
 export const personal = {
   name: 'Rudra Mehta',
   firstName: 'Rudra',
@@ -11,8 +13,8 @@ export const personal = {
   githubUsername: 'Rudra9905',
   linkedin: 'https://www.linkedin.com/in/rudra-mehta/',
   location: 'Nadiad, Gujarat, India',
-  resumeFile: '/Rudra_Mehta_Resume.pdf',
-  avatar: '/avatar.png',
+  resumeFile: asset('Rudra_Mehta_Resume.pdf'),
+  avatar: asset('avatar.png'),
 };
 
 // ─── About ────────────────────────────────────────────────────────────────────
@@ -148,7 +150,7 @@ export const education = {
 
 // ─── Achievements ─────────────────────────────────────────────────────────────
 export const awsCertificate = {
-  file: '/AWS Certified Cloud Practitioner certificate.pdf',
+  file: asset('AWS Certified Cloud Practitioner certificate.pdf'),
   downloadName: 'Rudra_Mehta_AWS_Cloud_Practitioner_Certificate.pdf',
 };
 
